@@ -1,0 +1,18 @@
+@import '../../mixin.scss';
+.privacy-policy {
+    width: clamp(300px, 95%, 1920px);
+    overflow-y: auto;
+    padding-top: 50px;
+    height: calc(100vh - 154px);
+    word-wrap: break-word;
+}
+
+a {
+    color: #ff4747;
+}
+
+@media (max-width: 1010px) {
+    .privacy-policy {
+        height: calc(100vh - 294px);
+    }
+}

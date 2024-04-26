@@ -1,0 +1,85 @@
+@import '../../mixin.scss';
+
+footer {
+    height: 100px;
+    padding: 0 clamp(20px, 10%, 100px);
+    border-top: 4px solid #FA7902;
+    display: flex;
+    justify-content: center;
+    span {
+        @include font-declaration ($fs: 23px, $fw: 400)
+    }
+
+    .logo_impressum {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .max_width_footer {
+        @include content-limitation();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .impressum {
+
+        .underline {
+            height: 3px;
+            width: 70%;
+            border-radius: 0 5px 5px 0;
+        }
+
+        &:hover {
+            .underline {
+                background-color: #FF4747;
+
+            }
+        }
+    }
+
+
+
+    .contact_sides {
+        width: 176px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        gap: 42px;
+
+        img {
+            cursor: pointer;
+            width: 30px;
+            transition: width 100ms ease-in-out, height 100ms ease-in-out;
+
+            &:hover {
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1010px) {
+    footer {
+        height: 200px;
+        // flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .max_width_footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    footer {
+        span {
+            font-size: 18px;
+        }
+    }
+}

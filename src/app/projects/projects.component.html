@@ -1,0 +1,21 @@
+<div class="max_width">
+    <div class="nav-space"></div>
+    <div class="header_field">
+        <div class="header">
+            <div class="line_left">
+                <div></div>
+            </div>
+            <h1>Portfolio</h1>
+            <div class="line_right"></div>
+        </div>
+        <span>{{translateText.portfolioText[translateText.language]['portfolioIntroduce']}}</span>
+    </div>
+
+    <!-- <div class="projects_shadow_red"><img src="./../assets/img/shadows/shadow_projects_contact_red.svg" alt=""></div> -->
+    <app-project *ngFor="let project of projects" [project]="project[translateText.language]"></app-project>
+
+
+    <div class="projects_shadow_orange">
+        <img src="./../assets/img/shadows/shadow_skills_projects_orange.svg" alt="">
+    </div>
+</div>

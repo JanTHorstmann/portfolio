@@ -1,0 +1,28 @@
+<div class="max_width">
+    <div class="nav-space"></div>
+    <div class="skill_field">
+        <div class="get_in_touch_btn_responsive">
+            <a href="#app-contact-form">{{translateText.skillsText[translateText.language]['contactBtn']}}</a>
+        </div>
+        <div class="skills">
+            <div *ngFor="let skill of SKILLS_IMAGES" class="skill_icon">
+                <img src="../../assets/img/skills/{{skill.imgPath}}">
+                <span>{{skill.name}}</span>
+            </div>
+        </div>
+        <div class="skills_description">
+            <div class="get_in_touch">
+                <div>
+                    <div class="skills_headline">
+                        <h1>{{translateText.skillsText[translateText.language]['h1']}}</h1>
+                        <img class="red_line" src="../../assets/img/skills/red_line.png" alt="">
+                    </div>
+                    <span>{{translateText.skillsText[translateText.language]['skillIntroduce']}}</span>
+                </div>
+                <div class="get_in_touch_btn">
+                    <a href="#app-contact-form">{{translateText.skillsText[translateText.language]['contactBtn']}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

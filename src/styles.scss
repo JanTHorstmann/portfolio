@@ -1,1 +1,202 @@
-/* You can add global styles to this file, and also import other style files */
+@import './font-face/font_face.css';
+.d-none {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    // overflow-x: hidden;
+}
+
+.overflowY {
+    overflow-y: hidden;
+}
+
+body {
+    font-family: 'poppinsregular';
+    margin: 0;
+    background-color: #141D2F;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'poppinsregular';
+}
+
+.font_64 {
+    font-size: 64px;
+    font-weight: 400;
+    text-wrap: nowrap;
+}
+
+.font_60 {
+    font-size: 60px;
+}
+
+.color_FF4747 {
+    color: #FF4747;
+}
+
+.color_FA7902 {
+    color: #FA7902 !important;
+}
+
+app-about-me {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-space {
+    height: 100px;
+    width: 100%;
+}
+
+.max_width {
+    width: clamp(300px, 100%, 2400px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fa7902;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fa6602;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #fa6602;
+}
+::-webkit-scrollbar-track {
+  background: #e3e3e3;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+// ::-webkit-scrollbar-track:hover {
+//   background: #d4d4d4;
+// }
+// ::-webkit-scrollbar-track:active {
+//   background: #dbdbdb;
+// }
+// ::-webkit-scrollbar-corner {
+//   background: transparent;
+// }
+
+#app-introduce, 
+#app-about-me, 
+#app-skills,
+#app-projects,
+#app-contact-form,
+app-privacy-policy,
+app-impressum {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#app-introduce {
+    height: 100vh;
+    align-items: center;
+}
+
+@media (max-width: 1450px) {
+
+    h1 {
+        margin: 0;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .font_60 {
+        font-size: 35px;
+    }
+
+    .font_64 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 1060px) {
+    
+    h1 {
+        margin: 0;
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .font_60 {
+        font-size: 29px;
+    }
+
+    .font_64 {
+        font-size: 32px;
+    }
+
+    #app-introduce {
+        align-items: unset;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #app-introduce {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 350px) {
+    
+    h1 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .font_60 {
+        font-size: 24px;
+    }
+
+    .font_64 {
+        font-size: 27px;
+    }
+
+}
+html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

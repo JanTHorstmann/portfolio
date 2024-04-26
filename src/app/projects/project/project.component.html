@@ -1,0 +1,13 @@
+<div class="projects_shadow_red"><img src="{{ project.shadow }}" alt=""></div>
+<div class="project" [class.row_reverse]="project.reverse">
+    <img src="{{ project.img }}" alt="">
+    <div class="project_description" [class.ai_end]="project.reverse">
+        <h3>{{ project.name }}</h3>
+        <h4>{{ project.skillTypes }} </h4>
+        <span>{{ project.description }}</span>
+        <div class="project_btn">
+            <a class="test_btn" href="{{ project.liveLink }}" target="_blank">Live Test</a>
+            <a class="git_btn" href="{{ project.gitLink }}" target="_blank">Github</a>
+        </div>
+    </div>
+</div>

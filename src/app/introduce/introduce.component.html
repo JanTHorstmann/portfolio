@@ -1,0 +1,66 @@
+<app-navbar id="app-navbar"></app-navbar>
+
+<div class="max_width">
+    <div class="burger_menu">
+        <input type="checkbox" id="responsive_menu" [checked]="responsiveMenu" (click)="schowResponsiveMenu()">
+        <label for="responsive_menu" class="responsive_navbar">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+    </div>
+    <div class="responsive_burger_menu" [class.show_burger_menu]="responsiveMenu">
+        <div class="changeLanguage_btn" (click)="translateText.changeLanguage()">
+            {{translateText.navbarText[translateText.language]['translateBtn']}}</div>
+        <a href="#app-about-me"
+            (click)="responsiveMenu=false; closeResponsiveMenu()">{{translateText.aboutMeText[translateText.language]['h1']}}</a>
+        <a href="#app-skills"
+            (click)="responsiveMenu=false; closeResponsiveMenu()">{{translateText.skillsText[translateText.language]['h1']}}</a>
+        <a href="#app-projects" (click)="responsiveMenu=false; closeResponsiveMenu()">Portfolio</a>
+        <a href="#app-contact-form"
+            (click)="responsiveMenu=false; closeResponsiveMenu()">{{translateText.contactText[translateText.language]['h1']}}</a>
+    </div>
+
+
+    <div class="introduce_field">
+        <img src="../../assets/img/introduce/main_image.png" alt="">
+        <div class="name_and_btn">
+            <div class="introduce">
+                <span class="rotate_270 font_64">I am</span>
+                <div>
+                    <h1>Jan Horstmann</h1>
+                    <span class="font_60 color_FF4747">FRONTEND DEVELOPER</span>
+                </div>
+            </div>
+
+            <div class="introduce_btn">
+                <a href="#app-contact-form">Let's talk!</a>
+            </div>
+        </div>
+    </div>
+    <img class="curve_decoration" src="../../assets/img/introduce/curve_decoration.png" alt="">
+
+    <div class="contact_field_scroll_down">
+        <div class="contact_sides">
+            <div class="conatct_icons">
+                <img src="../../assets/img/introduce/red_line.png" alt="">
+                <a href="https://github.com/JanTHorstmann?tab=repositories" target="_blank">
+                    <img src="../../assets/img/introduce/github.png" alt="">
+                </a>
+                <a href="#app-contact-form">
+                    <img src="../../assets/img/introduce/mail.png" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/jan-t-horstmann/" target="_blank">
+                    <img src="../../assets/img/introduce/linkedin.png" alt="">
+                </a>
+            </div>
+            <a class="contact_email" href="#app-contact-form">kontakt&#64;jan-horstmann.eu</a>
+        </div>
+        <div class="scroll_down">
+            <div class="rotate_90 scroll_down">
+                <span class="">Scroll down</span>
+                <img src="../../assets/img/introduce/arrow-down-line.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="max_width">
+    <div class="nav-space"></div>
+    <div class="header_contact_form">
+        <div class="line_right"></div>
+        <h1>{{translateText.contactText[translateText.language]['h1']}}</h1>
+    </div>
+
+    <div class="contact_field">
+        <div class="contact_description">
+            <h3>{{translateText.contactText[translateText.language]['contactIntroduce']}}</h3>
+            <span>{{translateText.contactText[translateText.language]['contactMe']}}</span>
+            <span>{{translateText.contactText[translateText.language]['contactMessage']}}</span>
+        </div>
+
+        <form class="contact_form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="checkbox_input">
+                <input id="name_input" [(ngModel)]="contactData.name" (click)="resetNameInput()"
+                    [class.correct_entry]="correctName" [class.false_entry_border]="falseName" type="text" name="name"
+                    placeholder="{{translateText.contactText[translateText.language]['contactFormNamePlaceholder']}}"
+                    #nameField required>
+                <label [class.false_entry_color]="falseName" class="checkbox_alert" for="text">
+                    {{translateText.contactText[translateText.language]['contactFormNameFalse']}}
+                </label>
+            </div>
+            <div class="checkbox_input">
+                <input [(ngModel)]="contactData.email" (click)="resetEmailInput()" [class.correct_entry]="correctEmail"
+                    [class.false_entry_border]="falseEmail" type="email" name="email" placeholder="E-Mail*" #emailField
+                    required>
+                <label [class.false_entry_color]="falseEmail" class="checkbox_alert" for="email">
+                    {{translateText.contactText[translateText.language]['contactFormMailFalse']}}
+                </label>
+            </div>
+            <div class="checkbox_input">
+                <textarea [(ngModel)]="contactData.message" (click)="resetMessageInput()"
+                    [class.correct_entry_message]="correctMessage" [class.false_entry_border_message]="falseMessage"
+                    type="text" name="message"
+                    placeholder="{{translateText.contactText[translateText.language]['contactFormMessagePlaceholder']}}"
+                    #messageField required></textarea>
+                <label [class.false_entry_color]="falseMessage" class="checkbox_alert" for="">
+                    {{translateText.contactText[translateText.language]['contactFormMessageFalse']}}
+                </label>
+            </div>
+            <div class="checkbox_input">
+                <div class="checkbox_and_label">
+                    <div class="checkbox">
+                        <input required type="checkbox" (click)="toggleCheckbox()">
+                    </div>
+                    <label for="checkbox">
+                        {{translateText.contactText[translateText.language]['privacyPolicyStart']}}
+                        <a
+                            href="privacy-policy">{{translateText.contactText[translateText.language]['privacyPolicy']}}</a>
+                        {{translateText.contactText[translateText.language]['privacyPolicyEnd']}}
+                    </label>
+                </div>
+                <label class="checkbox_alert" for="checkbox">
+                    {{translateText.contactText[translateText.language]['privacyPolicyAlert']}}
+                </label>
+            </div>
+            <div class="btn_field">
+                <button [class.accepted_checkbox]="checked"
+                    #button>{{translateText.contactText[translateText.language]['contactFormBtn']}}</button>
+            </div>
+        </form>
+    </div>
+    <div class="go_up_btn">
+        <a href="#app-introduce"><img [src]="imgSrc" (mouseover)="changeImg('over')"
+                (mouseleave)="changeImg('leave')"></a>
+    </div>
+
+    <div class="contact_shadow">
+        <div class="shadow_container">
+            <img src="./../../assets/img/shadows/shadow_projects_contact_red.svg" alt="">
+        </div>
+    </div>
+
+    <div [class.bottom-50]="messageSend" [class.d-none]="messageHide" class="message_container">
+        <span class="message_banner">{{translateText.contactText[translateText.language]['messageSend']}}</span>
+    </div>
+</div>

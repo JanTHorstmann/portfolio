@@ -1,0 +1,26 @@
+<nav>
+    <div class="max_width_navbar">
+        <a href="#app-introduce" (click)="removeClasses()">
+            <img src="../../../assets/img/introduce/logo_name.png" alt="">
+        </a>
+        <div>
+            <div class="nav_btn" (click)="addFocusClass('aboutMe')">
+                <a href="#app-about-me" #aboutMe>{{translateText.navbarText[translateText.language]['aboutMeLink']}}</a>
+                <div #aboutMe_underline></div>
+            </div>
+            <div class="nav_btn" (click)="addFocusClass('skills')">
+                <a href="#app-skills" #skills>Skills</a>
+                <div #skills_underline></div>
+            </div>
+            <div class="nav_btn" (click)="addFocusClass('portfolio')">
+                <a href="#app-projects" #portfolio>Portfolio</a>
+                <div #portfolio_underLine></div>
+            </div>
+            <div class="nav_btn" (click)="translateText.changeLanguage()">
+                <a>
+                    {{translateText.navbarText[translateText.language]['translateBtn']}}
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,107 @@
+@import '../../mixin.scss';
+
+.about_me_field {
+    // padding-left: clamp(20px, 20%, 100px);
+    @include flex-justy-align($jc:space-between);
+    @include content-limitation();
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.about_me {
+    width: 100%;
+    padding-left: 20px;
+    h1 {
+        margin-bottom: 40px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.description_personal_things {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 35px;
+}
+
+.personal_things {
+    width: 90%;
+    display: flex;
+    gap: 35px;
+    
+}
+
+.personal_things_icon {
+    width: 40px;
+    height: 60px;
+    @include flex-justy-align($ai:flex-start);
+
+    img {
+        width: 50px;
+        height: 50px;
+        transition: width 100ms ease-in-out, height 100ms ease-in-out;
+
+        &:hover {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.image_head {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    img {
+        width: 370px;
+        height: 370px;
+        border-radius: 100%;
+        border: 4px solid #FA7902;
+    }
+}
+
+.orange_line {
+    width: 25%;
+    border-bottom: 4px solid #FA7902;
+}
+
+@media (max-width: 1010px) {
+
+    // .about_me_field {
+    //     padding-right: clamp(20px, 10%, 100px);
+    // }
+
+    .image_head {
+        display: none;
+    }
+
+    .personal_things {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .description_personal_things {
+        align-items: flex-start;
+    }
+
+    .personal_things_icon {
+        justify-content: left;
+    }
+
+    // .nav-space {
+    //     height: 200px;
+    // }
+}
+
+@media (max-width: 500px) {
+
+    .nav-space {
+        height: 0px;
+    }
+}

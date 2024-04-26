@@ -1,0 +1,22 @@
+@mixin flex-justy-align ($dp: flex,$jc: center, $ai: center) {
+    display: $dp;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin font-declaration ($fs: 32px, $fw: 700, $fc: #FFFFFF) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+}
+
+@mixin btn-decoration ($pad: 15px 30px, $b: none, $br: 10px, $bc: #FF4747) {
+    padding: $pad;
+    border: $b;
+    border-radius: $br;
+    background-color: $bc;
+}
+
+@mixin content-limitation() {
+    width: clamp(300px, 100%, 1920px);
+}

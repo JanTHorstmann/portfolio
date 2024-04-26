@@ -1,0 +1,331 @@
+@import '../../mixin.scss';
+
+.header_contact_form {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    @include content-limitation();
+}
+
+.line_right {
+    background-color: #FF4747;
+    height: 4px;
+    width: clamp(20px, 40%, 50px);
+}
+
+.contact_field {
+    @include content-limitation();
+    display: flex;
+    gap: 50px;
+
+    .contact_description {
+        padding-left: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact_form {
+        padding-right: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        input[type="text"],
+        [type="email"] {
+            cursor: pointer;
+            @include btn-decoration($b: 1px solid #FF4747, $bc: unset);
+            @include font-declaration ($fs: 16px, $fw: 400);
+            transition: border 300ms ease-in-out;
+
+
+
+            &:hover {
+                border: 1px solid #FA7902;
+            }
+        }
+
+        textarea {
+            cursor: pointer;
+            height: 200px;
+            resize: none;
+            @include btn-decoration($b: 1px solid #FF4747, $bc: unset);
+            @include font-declaration ($fs: 16px, $fw: 400);
+            font-family: 'poppinsregular';
+            transition: border 300ms ease-in-out;
+
+            &:hover {
+                border: 1px solid #FA7902;
+            }
+        }
+
+        button {
+            cursor: default;
+            @include font-declaration ($fs: 23px, $fw: 400);
+            @include btn-decoration($b: none, $bc: #B6B6B6);
+            width: 60%;
+        }
+    }
+}
+
+.checkbox_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .checkbox_alert {
+        color: transparent;
+    }
+}
+
+.checkbox_and_label {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
+
+    .checkbox {
+        height: 25px;
+        width: 30px;
+        @include flex-justy-align();
+
+        &:hover {
+            background-color: #183771;
+            border-radius: 100%;
+        }
+    }
+
+    input[type="checkbox"] {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        margin: 0;
+        min-width: 20px;
+        min-height: 20px;
+        border: 3px solid #FA7902;
+        border-radius: 3px;
+
+    }
+
+    input[type="checkbox"]:checked::before {
+        content: '\2713';
+        color: #FA7902;
+        font-size: 20px;
+        text-align: center;
+        line-height: 10px;
+
+    }
+
+    a {
+        color: #FF4747;
+    }
+}
+
+
+.input_and_label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.btn_field {
+    width: 100%;
+    height: 65px;
+    @include flex-justy-align();
+}
+
+.go_up_btn {
+    // padding: 50px clamp(20px, 10%, 100px);
+    padding: 50px 0;
+    @include content-limitation();
+    display: flex;
+    justify-content: right;
+
+    img {
+        cursor: pointer;
+        padding-right: 20px;
+    }
+}
+
+.correct_entry {
+    border: 1px solid #70E61C !important;
+    background-image: url('../../assets/img/contact_form/true.png') !important;
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
+.false_entry_border {
+    border: 1px solid #E61C40 !important;
+    background-image: url('../../assets/img/contact_form/false.png') !important;
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
+.correct_entry_message {
+    border: 1px solid #70E61C !important;
+    background-image: url('../../assets/img/contact_form/true.png') !important;
+    background-repeat: no-repeat;
+    background-position: 96% 10%;
+}
+
+.false_entry_border_message {
+    border: 1px solid #E61C40 !important;
+    background-image: url('../../assets/img/contact_form/false.png') !important;
+    background-repeat: no-repeat;
+    background-position: 96% 10%;
+}
+
+.false_entry_color {
+    color: #E61C40 !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #141D2F inset;
+    -webkit-text-fill-color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ffffff;
+}
+
+.accepted_checkbox {
+    cursor: pointer !important;
+    background-color: #FA7902 !important;
+    transition: padding 100ms ease-in-out, width 100ms ease-in-out;
+
+    &:hover {
+        padding: 20px 40px !important;
+        width: 65% !important;
+    }
+}
+
+// .projects_shadow_orange {
+//     position: relative;
+// }
+
+.contact_shadow {
+    position: relative;
+    width: 100%;
+    // overflow: hidden;
+
+    .shadow_container {
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        height: 390px;
+        width: 100%;
+        bottom: 0;
+    }
+
+    img {
+        z-index: -1;
+        position: absolute;
+        bottom: -500px;
+        rotate: 245deg;
+        left: -325px;
+    }
+}
+
+.message_container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    transition: bottom 225ms ease-in-out;
+}
+
+.bottom-50 {
+    bottom: 50%;
+}
+
+.message_banner {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FA7902;
+    width: 250px;
+}
+
+@media (max-width: 1010px) {
+    .contact_field {
+        flex-direction: column;
+        width: 80%;
+
+        .contact_description {
+            width: 100%;
+        }
+
+        .contact_form {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 560px) {
+    .contact_field {
+        .contact_form {
+
+            button {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .contact_shadow {
+
+        img {
+            bottom: -280px;
+            left: -260px;
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+
+    .header_contact_form {
+        gap: 30px;
+    }
+
+    .contact_field {
+        .contact_form {
+
+            button {
+                width: 85%;
+            }
+        }
+    }
+
+    .accepted_checkbox {
+        &:hover {
+            width: 90% !important;
+        }
+    }
+
+    .contact_shadow {
+
+        img {
+            bottom: -280px;
+            left: -260px;
+            width: 500px;
+        }
+    }
+}

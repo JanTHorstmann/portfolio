@@ -1,0 +1,339 @@
+@import '../../mixin.scss';
+
+.introduce_field {
+    @include content-limitation();
+    @include flex-justy-align($jc: space-between);
+    padding-top: 80px;
+
+    img {
+        width: 640px;
+        padding-left: 20px;
+    }
+
+
+}
+
+.name_and_btn {
+    z-index: 1;
+    @include flex-justy-align();
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration($bc: #FA7902);
+        transition: padding 100ms ease-in-out;
+
+        &:hover {
+            background-color: #FF4747;
+            padding: 20px 40px;
+        }
+    }
+}
+
+.introduce_btn {
+    display: flex;
+    align-items: flex-start;
+    height: 60px;
+}
+
+.introduce {
+    @include flex-justy-align();
+    padding-right: 20px;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.rotate_270 {
+    transform: rotate(270deg);
+}
+
+.rotate_90 {
+    transform: rotate(90deg);
+}
+
+.curve_decoration {
+    height: 1000px;
+    width: clamp(300px, 100%, 2400px);
+    position: absolute;
+    top: 310px;
+}
+
+.contact_field_scroll_down {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    @include content-limitation();
+    @include flex-justy-align($jc: space-between, $ai: flex-end);
+
+    img {
+        width: 30px;
+        transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    }
+}
+
+.contact_sides {
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    z-index: 1;
+
+    img {
+        &:hover {
+            width: 40px;
+        }
+    }
+}
+
+.conatct_icons {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.scroll_down {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 130px;
+}
+
+.burger_menu {
+    display: none;
+    height: 50px;
+    overflow-x: hidden;
+    position: fixed;
+    right: 20px;
+    top: 6px;
+    z-index: 5;
+}
+
+label.responsive_navbar {
+    cursor: pointer;
+    display: block;
+    background: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+
+
+input#responsive_menu {
+    display: none
+}
+
+.line {
+    position: absolute;
+    left: 10px;
+    height: 2px;
+    width: 30px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    display: block;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.line:nth-child(1) {
+    top: 12px;
+}
+
+.line:nth-child(2) {
+    top: 24px;
+}
+
+.line:nth-child(3) {
+    top: 36px;
+}
+
+#responsive_menu:checked+.responsive_navbar .line:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+#responsive_menu:checked+.responsive_navbar .line:nth-child(2) {
+    opacity: 0;
+}
+
+#responsive_menu:checked+.responsive_navbar .line:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+.show_burger_menu {
+    transform: translateX(0%) !important;
+}
+
+.responsive_burger_menu {
+    overflow-x: hidden;
+    position: fixed;
+    z-index: 99;
+    top: 65px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 65px);
+    width: 100%;
+    background-color: rgba(20, 29, 47, 0.8);
+    transform: translateX(110%);
+    transition: transform 225ms ease;
+    @include flex-justy-align($dp: none);
+    flex-direction: column;
+    gap: 29px;
+    @include font-declaration($fs: 23px, $fw: 400);
+    a {
+        &:hover {
+            color: #FA7902;
+        }
+    }
+}
+
+.changeLanguage_btn {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid #FFFFFF;
+    background-color: #fa7902;
+    @include flex-justy-align();
+    @include font-declaration($fs: 40px, $fw: 700);
+}
+
+@media (max-width: 1450px) {
+    .curve_decoration {
+        height: 900px;
+        top: 360px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .curve_decoration {
+        height: 450px;
+        top: 555px;
+    }
+    .contact_field_scroll_down {
+        margin-top: 0;
+    }
+
+    .introduce_field {
+        // padding-top: 80px;
+        flex-direction: column;
+        background-position: 50%;
+        background-size: 60%;
+        img {
+            padding-left: 0;
+        }
+    }
+
+    .contact_field_scroll_down {
+        margin-top: -10px;
+    }
+
+    .scroll_down {
+        display: none;
+    }
+
+    .contact_sides {
+        padding-right: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 700px) {
+    .introduce_field {    
+        img {
+            width: 585px;
+        }   
+    }
+
+    .contact_field_scroll_down {
+        margin-top: 50px;
+    }
+
+    .curve_decoration {
+        height: 230px;
+        top: 580px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .introduce_field {
+        padding-bottom: 50px;
+        img {
+            width: 485px;
+        }
+    }
+
+    .contact_email {
+        display: none;
+    }
+
+    .curve_decoration {
+        height: 190px;
+        top: 490px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .introduce_field {
+        padding-top: 0;
+        height: 70%;
+        img {
+            width: 400px;
+        }
+    }
+
+    .burger_menu {
+        display: block;
+    }
+
+    .responsive_burger_menu {
+        display: flex;
+    }
+
+    .curve_decoration {
+        top: 330px;
+    }
+}
+
+@media (max-width: 420px) {
+    .curve_decoration {
+        height: 150px;
+        top: 295px;
+    }
+
+    .introduce_field {
+        padding-bottom: 0px;
+
+        img {
+            width: 350px;
+        }
+    }
+
+    .introduce_decoration_curve {
+        .curve_decoration_container {
+            top: -730px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .curve_decoration {
+        top: 245px;
+    }
+
+    .introduce_field {
+
+        img {
+            width: 300px;
+        }
+    }
+}

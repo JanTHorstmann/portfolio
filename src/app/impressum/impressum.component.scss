@@ -1,0 +1,12 @@
+.impressum {
+    overflow-y: auto;
+    padding: 0 clamp(20px, 10%, 100px);
+    padding-top: 50px;
+    height: calc(100vh - 154px);
+}
+
+@media (max-width: 1010px) {
+    .impressum {
+        height: calc(100vh - 294px);
+    }
+}

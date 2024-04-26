@@ -1,0 +1,149 @@
+@import '../../mixin.scss';
+
+.skill_field {
+    height: auto;
+    // padding-left: clamp(20px, 10%, 100px);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+    @include content-limitation();
+    @include flex-justy-align($jc: space-between);
+    gap: 100px;
+}
+
+.skills {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-left: 20px;
+}
+
+.skill_icon {
+    height: 100px;
+    width: 70px;
+    text-align: center;
+    @include flex-justy-align($jc: flex-end);
+    flex-direction: column;
+    gap: 10px;
+    transition: gap 100ms ease-in-out;
+
+    &:hover {
+        gap: 21px;
+    }
+
+    img {
+        height: 60px;
+    }
+}
+
+.skills_description {
+    display: flex;
+    justify-content: right;
+    padding-left: clamp(20px, 10%, 50px);
+    width: 40%;
+}
+
+.get_in_touch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    gap: 34px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    span {
+        padding-right: clamp(20px, 20%, 100px);
+    }
+}
+
+.get_in_touch_btn_responsive {
+    display: none;
+    height: 60px;
+
+    a {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ($bc: #FA7902);
+        transition: padding 100ms ease-in-out;
+
+        &:hover {
+            @include btn-decoration ($pad: 20px 40px);
+        }
+    }
+}
+
+.get_in_touch_btn {
+    height: 60px;
+    padding-right: clamp(20px, 20%, 100px);
+
+    a {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ($bc: #FA7902);
+        transition: padding 100ms ease-in-out;
+
+        &:hover {
+            @include btn-decoration ($pad: 20px 40px);
+        }
+    }
+}
+
+.skills_headline {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: right;
+}
+
+.red_line {
+    width: 50px;
+    height: 4px;
+}
+
+
+@media (max-width: 1010px) {
+
+    .skill_field {
+        flex-direction: column-reverse;
+        align-items: end;
+        padding-left: 0;
+    }
+
+    .skills_description {
+        width: 100%;
+        justify-content: right;
+    }
+
+    .get_in_touch_btn {
+        display: none !important;
+    }
+
+    .get_in_touch_btn_responsive {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .skill_icon {
+        img {
+            height: 45px;
+        }
+    }
+
+    .skills {
+        width: 100%;
+        justify-content: center;
+        gap: 70px;
+        // padding: 0 clamp(20px, 10%, 100px);
+    }
+
+}
+
+@media (max-width: 500px) {
+    .skills {
+        gap: 30px;
+    }
+}
