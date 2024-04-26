@@ -12,7 +12,7 @@
     </div>
 
     <!-- <div class="projects_shadow_red"><img src="./../assets/img/shadows/shadow_projects_contact_red.svg" alt=""></div> -->
-    <app-project *ngFor="let project of projects" [project]="project[translateText.language]"></app-project>
+    <app-project #projectView *ngFor="let project of projects" [project]="project[translateText.language]"></app-project>
 
 
     <div class="projects_shadow_orange">

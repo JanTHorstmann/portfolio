@@ -54,6 +54,8 @@ export class ProjectsComponent {
         liveLink: 'http://wizardofcoast.jan-horstmann.eu/index.html',
         gitLink: 'https://github.com/JanTHorstmann/Wizard-of-the-coast',
         reverse: true,
+        fadeLeft: 'fade-left',
+        fadeRight: 'fade-right',
       },
 
       en: {
@@ -64,6 +66,8 @@ export class ProjectsComponent {
         liveLink: 'http://wizardofcoast.jan-horstmann.eu/index.html',
         gitLink: 'https://github.com/JanTHorstmann/Wizard-of-the-coast',
         reverse: true,
+        fadeLeft: 'fade-right',
+        fadeRight: 'fade-left',
       },
     },
   ];

@@ -37,6 +37,7 @@
 
 app-project {
     @include flex-justy-align ();
+    overflow-x: hidden;
 }
 
 // .projects_shadow_red {

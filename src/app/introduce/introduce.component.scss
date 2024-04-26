@@ -96,10 +96,77 @@
 }
 
 .scroll_down {
+    z-index: 1;
     display: flex;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 45px;
     height: 130px;
+}
+
+.arrow-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-icon1 {
+    opacity: 0;
+    animation: showArrow1 2s ease-in-out infinite;
+}
+
+@keyframes showArrow1 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrow-icon2 {
+    opacity: 0;
+    animation: showArrow2 2s ease-in-out infinite;
+}
+
+@keyframes showArrow2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrow-icon3 {
+    opacity: 0;
+    animation: showArrow3 2s ease-in-out infinite;
+}
+
+@keyframes showArrow3 {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .burger_menu {

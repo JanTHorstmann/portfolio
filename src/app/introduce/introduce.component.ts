@@ -1,12 +1,13 @@
 import { Component, ElementRef   } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TranslateService } from '../translate.service';
-
+import {MatIconModule} from '@angular/material/icon';
 @Component({
   selector: 'app-introduce',
   standalone: true,
   imports: [
     NavbarComponent,    
+    MatIconModule,
   ],
   templateUrl: './introduce.component.html',
   styleUrl: './introduce.component.scss'

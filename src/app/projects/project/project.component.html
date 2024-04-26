@@ -1,7 +1,7 @@
 <div class="projects_shadow_red"><img src="{{ project.shadow }}" alt=""></div>
 <div class="project" [class.row_reverse]="project.reverse">
-    <img src="{{ project.img }}" alt="">
-    <div class="project_description" [class.ai_end]="project.reverse">
+    <img [attr.data-aos]="project.reverse ? 'fade-left' : 'fade-right'" src="{{ project.img }}" alt="">
+    <div [attr.data-aos]="project.reverse ? 'fade-right' : 'fade-left'" class="project_description" [class.ai_end]="project.reverse">
         <h3>{{ project.name }}</h3>
         <h4>{{ project.skillTypes }} </h4>
         <span>{{ project.description }}</span>

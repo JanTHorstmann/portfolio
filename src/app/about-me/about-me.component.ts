@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import gsap from 'gsap';
 import { TranslateService } from '../translate.service';
 
 @Component({
