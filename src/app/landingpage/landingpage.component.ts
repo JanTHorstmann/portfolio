@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AboutMeComponent } from './../about-me/about-me.component';
 import { SkillsComponent } from './../skills/skills.component';
-import { ProjectsComponent } from './../projects/projects.component';
+import { ProjectsComponent } from '../projects/projects.component';
 import { ContactFormComponent } from './../contact-form/contact-form.component';
 import { IntroduceComponent } from './../introduce/introduce.component';
 
