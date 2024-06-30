@@ -70,6 +70,29 @@ export class ProjectsComponent {
         fadeRight: 'fade-left',
       },
     },
+
+    //Da-Bubble - Project
+    {
+      de: {
+        img: '../../../assets/img/projects/da_bubble_img.png',
+        name: 'Da-Bubble',
+        skillTypes: 'Angular | Firebase | Material Design | TypeScript | HTML | SCSS',
+        description: 'DA-Bubble ist ein Slack-ähnlicher Klon, den ich als Abschlussprojekt meines Frontend-Kurses erstellt habe. Mit Angular und Firebase bietet Dabubble Echtzeit-Messaging, Kanäle und Benutzerauthentifizierung. Es ist eine unterhaltsame, interaktive App, die meine Fähigkeiten in der modernen Webentwicklung zeigt.',
+        liveLink: 'https://dabubble.jan-horstmann.eu/',
+        gitLink: 'https://github.com/JanTHorstmann/Da-Bubble',
+        reverse: false,
+      },
+
+      en: {
+        img: '../../../assets/img/projects/da_bubble_img.png',
+        name: 'Da-Bubble',
+        skillTypes: 'Angular | Firebase | Material Design | TypeScript | HTML | SCSS',
+        description: 'DA-Bubble is a Slack-like clone that I created as a final project for my frontend course. Using Angular and Firebase, Dabubble offers real-time messaging, channels and user authentication. It is a fun, interactive app that showcases my skills in modern web development.',
+        liveLink: 'https://dabubble.jan-horstmann.eu/',
+        gitLink: 'https://github.com/JanTHorstmann/Da-Bubble',
+        reverse: false,
+      },
+    },
   ];
 
 }
