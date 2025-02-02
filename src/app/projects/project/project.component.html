@@ -5,9 +5,14 @@
         <h3>{{ project.name }}</h3>
         <h4>{{ project.skillTypes }} </h4>
         <span>{{ project.description }}</span>
-        <div class="project_btn">
+        <div class="project_btn" *ngIf="!project.ownBackEnd">
             <a class="test_btn" href="{{ project.liveLink }}" target="_blank">Live Test</a>
-            <a class="git_btn" href="{{ project.gitLink }}" target="_blank">Github</a>
+            <a class="git_btn" href="{{ project.gitLinkFrontEnd }}" target="_blank">Github</a>
+        </div>
+        <div class="project_btn_with_own_backend" *ngIf="project.ownBackEnd">
+            <a class="test_btn" href="{{ project.liveLink }}" target="_blank">Live Test</a>
+            <a class="git_btn" href="{{ project.gitLinkFrontEnd }}" target="_blank">Github FrontEnd</a>
+            <a class="git_btn" href="{{ project.gitLinkBackEnd }}" target="_blank">Github BackEnd</a>
         </div>
     </div>
 </div>

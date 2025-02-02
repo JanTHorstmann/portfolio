@@ -3,7 +3,7 @@
 .project {
     // padding: 0 clamp(20px, 10%, 100px);
     padding: 0 20px;
-    @include flex-justy-align($jc:space-between);
+    @include flex-justy-align($jc: space-between);
     @include content-limitation();
     gap: 90px;
     margin-bottom: 100px;
@@ -37,25 +37,57 @@
     width: 70%;
     display: flex;
     justify-content: space-between;
-}
 
-.test_btn {
-    @include font-declaration ($fs: 23px, $fw: 400);
-    @include btn-decoration ();
-    transition: background-color 100ms ease-in-out;
+    .test_btn {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ();
+        transition: background-color 100ms ease-in-out;
 
-    &:hover {
-        background-color: #FA7902;
+        &:hover {
+            background-color: #FA7902;
+        }
+    }
+
+    .git_btn {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ($b: 1px solid #FA7902, $bc: unset);
+        transition: background-color 100ms ease-in-out;
+
+        &:hover {
+            background-color: #FA7902;
+        }
     }
 }
 
-.git_btn {
-    @include font-declaration ($fs: 23px, $fw: 400);
-    @include btn-decoration ($b: 1px solid #FA7902, $bc: unset);
-    transition: background-color 100ms ease-in-out;
+.project_btn_with_own_backend {
+    // max-width: 375px;
+    // width: 70%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 
-    &:hover {
-        background-color: #FA7902;
+    a {
+        text-wrap: nowrap;
+    }
+
+    .test_btn {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ();
+        transition: background-color 100ms ease-in-out;
+
+        &:hover {
+            background-color: #FA7902;
+        }
+    }
+
+    .git_btn {
+        @include font-declaration ($fs: 23px, $fw: 400);
+        @include btn-decoration ($b: 1px solid #FA7902, $bc: unset);
+        transition: background-color 100ms ease-in-out;
+
+        &:hover {
+            background-color: #FA7902;
+        }
     }
 }
 
@@ -79,7 +111,7 @@
     }
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1310px) {
     .project {
         padding: 0;
         flex-direction: column;
@@ -88,6 +120,7 @@
 
     .project_description {
         align-items: center;
+
         span {
             padding: 0 20px;
         }
@@ -95,7 +128,10 @@
 
     .project_btn {
         width: 90%;
-        // padding: 0 20px;
+    }
+
+    .project_btn_with_own_backend {
+        width: 90%;
     }
 
     .projects_shadow_red {
@@ -105,6 +141,13 @@
             left: -225px;
             width: 450px;
         }
+    }
+}
+
+@media (max-width: 750px) {
+    .project_btn_with_own_backend {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

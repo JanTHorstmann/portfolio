@@ -60,7 +60,42 @@ export class SkillsComponent {
       name: 'Material Design',
       imgPath: 'material-design.png',
     },
-
+    {
+      name: 'Linux',
+      imgPath: 'linux.png',
+    },
+    {
+      name: 'Django',
+      imgPath: 'django.png',
+    },
+    {
+      name: 'Python',
+      imgPath: 'python.png',
+    },
+    {
+      name: 'Redis',
+      imgPath: 'redis.png',
+    },
+    {
+      name: 'PostgreSQL',
+      imgPath: 'postgresql.png',
+    },
+    {
+      name: 'SQL',
+      imgPath: 'sql.png',
+    },    
+    {
+      name: 'Cloud',
+      imgPath: 'cloud.png',
+    },
+    {
+      name: 'Docker',
+      imgPath: 'docker.png',
+    },
+    {
+      name: 'RxJS',
+      imgPath: 'rxjs.png',
+    },
   ]
 
 }
